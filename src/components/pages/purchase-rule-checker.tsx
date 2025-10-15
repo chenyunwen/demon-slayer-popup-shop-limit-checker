@@ -20,6 +20,13 @@ const SAMPLE_SERIES = sampleSeries as ProductSeries[];
 
 type Category = "random40" | "random15" | "extreme" | "other";
 
+const CATEGORY_LABELS: Record<Category, string> = {
+  random40: "隨機系列 40",
+  random15: "隨機系列 15",
+  extreme: "極限量商品",
+  other: "其他品項",
+};
+
 type Product = {
   id: string;
   name: string;
@@ -154,7 +161,7 @@ export default function PurchaseRuleChecker() {
 
   return (
     <div className="p-6 max-w-5xl mx-auto">
-      <h1 className="text-2xl font-semibold mb-4">購物限購檢查器</h1>
+      <h1 className="text-2xl font-semibold mb-4">鬼滅百景 購物限購檢查器</h1>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div className="md:col-span-2">
           <section className="mb-4">
@@ -232,7 +239,7 @@ export default function PurchaseRuleChecker() {
                     <div>
                       <div className="font-medium">{it.product.name}</div>
                       <div className="text-sm text-gray-600">
-                        {it.product.category}
+                        {CATEGORY_LABELS[it.product.category]}
                       </div>
                     </div>
                     <div className="flex items-center gap-2">
@@ -259,6 +266,12 @@ export default function PurchaseRuleChecker() {
                         onClick={() => setQty(it.product.id, it.qty + 1)}
                       >
                         +
+                      </button>
+                      <button
+                        className="px-2 py-1 border rounded bg-red-500 text-white hover:bg-red-600"
+                        onClick={() => setQty(it.product.id, 0)}
+                      >
+                        刪除
                       </button>
                     </div>
                   </div>
@@ -315,10 +328,13 @@ export default function PurchaseRuleChecker() {
                 / 3（且每款 ≤1）
               </div>
               <div>其他品項：每款限 1 件</div>
+              <div className="mt-2 font-medium">
+                總數量：{cartItems.reduce((s, i) => s + i.qty, 0)} / 25
+              </div>
             </div>
           </div>
 
-          <div className="mt-4">
+          {/* <div className="mt-4">
             <button
               onClick={() => {
                 // 匯出目前購物車 JSON（範例）
@@ -342,15 +358,15 @@ export default function PurchaseRuleChecker() {
             >
               匯出購物車 JSON
             </button>
-          </div>
+          </div> */}
         </aside>
       </div>
 
-      <footer className="mt-6 text-sm text-gray-600">
+      {/* <footer className="mt-6 text-sm text-gray-600">
         <div>
           說明：此範例著重前端檢查邏輯。正式上線應在後端再次驗證，以避免使用者繞過前端規則。
         </div>
-      </footer>
+      </footer> */}
     </div>
   );
 }

@@ -63,7 +63,17 @@
     "items": [
       {
         "id": "O-1",
-        "name": "第1款",
+        "name": "不知道有甚麼",
+        "category": "other"
+      },
+      {
+        "id": "O-2",
+        "name": "可能要去現場",
+        "category": "other"
+      },
+      {
+        "id": "O-3",
+        "name": "感受驚喜吧",
         "category": "other"
       }
     ]
