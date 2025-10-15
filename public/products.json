@@ -1,0 +1,71 @@
+[
+  {
+    "key": "random40",
+    "name": "隨機系列 40",
+    "limit": 5,
+    "items": [
+      {
+        "id": "40_Tanjirou",
+        "name": "炭治郎",
+        "category": "random40",
+        "imageFile": "40_Tanjirou.jpg"
+      },
+      {
+        "id": "40_Kanao",
+        "name": "香奈乎",
+        "category": "random40",
+        "imageFile": "40_Kanao.jpg"
+      }
+    ]
+  },
+  {
+    "key": "random15",
+    "name": "隨機系列 15",
+    "limit": 3,
+    "items": [
+      {
+        "id": "15_Giyuu",
+        "name": "富岡義勇",
+        "category": "random15",
+        "imageFile": "15_Giyuu.jpg"
+      },
+      {
+        "id": "15_Tokitou",
+        "name": "時透無一郎",
+        "category": "random15",
+        "imageFile": "15_Tokitou.jpg"
+      }
+    ]
+  },
+  {
+    "key": "extreme",
+    "name": "極限量商品",
+    "limit": 3,
+    "items": [
+      {
+        "id": "extreme_1",
+        "name": "色紙 A款",
+        "category": "extreme",
+        "imageFile": "extreme_1.jpg"
+      },
+      {
+        "id": "extreme_2",
+        "name": "色紙 B款",
+        "category": "extreme",
+        "imageFile": "extreme_2.jpg"
+      }
+    ]
+  },
+  {
+    "key": "other",
+    "name": "其他品項",
+    "limit": 1,
+    "items": [
+      {
+        "id": "O-1",
+        "name": "第1款",
+        "category": "other"
+      }
+    ]
+  }
+]

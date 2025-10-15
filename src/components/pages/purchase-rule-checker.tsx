@@ -1,6 +1,8 @@
 "use client";
 import React, { useMemo, useState } from "react";
+import sampleSeries from "@/../public/products.json";
 
+const SAMPLE_SERIES = sampleSeries as ProductSeries[];
 // 資料與程式說明 (繁體中文註解)
 // - 單檔 React + TypeScript 範例，可放在 Next.js 或 Create React App 中。
 // - 使用 Tailwind CSS class 作為樣式（如未安裝可自行改為一般 class）。
@@ -16,71 +18,20 @@ import React, { useMemo, useState } from "react";
 // 規則3️⃣
 // ・結帳總數量最多不得超過 25 個
 
-// 規則1️⃣ 🔸 隨機系列商品
-// ・共40款的系列：每人限購 5個
-// ✅可以：任意挑選5個品項，角色可以重複
-// ❌不可以：購買超過5個
-
-// ・共15款的系列：每人限購 3個
-// ✅可以：任意挑選3個品項，角色可以重複挑選
-// ❌不可以：購買超過3個 規則2️⃣
-
-// 🔸 極限量商品 每人限購 3個，且品項不得重複
-// ✅可以：挑選3種不同的極限量商品各1個
-// ❌不可以：購買同一款極限量商品2個以上
-
-// 🔸 其他品項 每人限購 1個
-// ✅可以：各品項各購買1個
-// ❌不可以：同一商品購買2個以上
-
-// 規則3️⃣ ✨ 結帳時所有商品合計最多不得超過25個。
-// ✅可以：各品項依限購數量選購，總數25個以內
-// ❌不可以：即使各品項皆未超限，總數仍超過25個
-
-// 範例商品（少量示範）
-const SAMPLE_PRODUCTS = (() => {
-  const products: Product[] = [];
-  // random40: 產生 8 個示範（實際可擴充到 40）
-  for (let i = 1; i <= 8; i++) {
-    products.push({
-      id: `R40-${i}`,
-      name: `隨機系列40 #${i}`,
-      category: "random40",
-    });
-  }
-  // random15: 產生 5 個示範（實際可擴充到 15）
-  for (let i = 1; i <= 5; i++) {
-    products.push({
-      id: `R15-${i}`,
-      name: `隨機系列15 #${i}`,
-      category: "random15",
-    });
-  }
-  // extreme: 5 款極限量示範
-  for (let i = 1; i <= 5; i++) {
-    products.push({
-      id: `E-${i}`,
-      name: `極限量 #${i}`,
-      category: "extreme",
-    });
-  }
-  // other: 一些其他品項
-  for (let i = 1; i <= 6; i++) {
-    products.push({
-      id: `O-${i}`,
-      name: `其他品項 #${i}`,
-      category: "other",
-    });
-  }
-  return products;
-})();
-
 type Category = "random40" | "random15" | "extreme" | "other";
 
 type Product = {
   id: string;
   name: string;
   category: Category;
+  imageFile?: string;
+};
+
+type ProductSeries = {
+  key: Category;
+  name: string;
+  limit: number;
+  items: Product[];
 };
 
 type CartItem = {
@@ -89,8 +40,20 @@ type CartItem = {
 };
 
 export default function PurchaseRuleChecker() {
-  const [products] = useState<Product[]>(SAMPLE_PRODUCTS);
+  // series (原本的 products 陣列) — 每個 series 包含 items
+  const [series] = useState<ProductSeries[]>(SAMPLE_SERIES);
+
+  // flatProducts 用於以 id 找到單一 Product
+  const flatProducts = useMemo<Product[]>(
+    () => series.flatMap((s) => s.items),
+    [series]
+  );
+
+  // cart: key = productId, value = qty
   const [cart, setCart] = useState<Record<string, number>>({});
+
+  // expand state: 哪些 series 被展開
+  const [expanded, setExpanded] = useState<Record<string, boolean>>({});
 
   function addToCart(productId: string) {
     setCart((c) => ({ ...c, [productId]: (c[productId] || 0) + 1 }));
@@ -121,13 +84,16 @@ export default function PurchaseRuleChecker() {
   }
 
   const cartItems = useMemo<CartItem[]>(() => {
-    return Object.entries(cart).map(([id, qty]) => ({
-      product: products.find((p) => p.id === id)!,
-      qty,
-    }));
-  }, [cart, products]);
+    return Object.entries(cart)
+      .map(([id, qty]) => {
+        const p = flatProducts.find((fp) => fp.id === id);
+        if (!p) return null;
+        return { product: p, qty };
+      })
+      .filter((x): x is CartItem => x !== null);
+  }, [cart, flatProducts]);
 
-  // 驗證邏輯
+  // 驗證邏輯（與你原本相同）
   function validateCart(items: CartItem[]) {
     const errors: string[] = [];
 
@@ -192,27 +158,61 @@ export default function PurchaseRuleChecker() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div className="md:col-span-2">
           <section className="mb-4">
-            <h2 className="text-lg font-medium">商品清單（範例）</h2>
+            <h2 className="text-lg font-medium">商品清單</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-3">
-              {products.map((p) => (
-                <div
-                  key={p.id}
-                  className="border rounded p-3 flex justify-between items-center"
-                >
-                  <div>
-                    <div className="font-medium">{p.name}</div>
-                    <div className="text-sm text-gray-600">
-                      類別：{p.category}
+              {series.map((s) => (
+                <div key={s.key} className="border rounded p-3">
+                  {/* 系列標題區 */}
+                  <div
+                    className="flex justify-between items-center cursor-pointer"
+                    onClick={() =>
+                      setExpanded((prev) => ({
+                        ...prev,
+                        [s.key]: !prev[s.key],
+                      }))
+                    }
+                  >
+                    <div className="flex flex-col">
+                      <h2 className="font-bold text-lg">{s.name}</h2>
+                      <div className="text-xs text-gray-500">
+                        {s.key === "random40" && "此系列總上限 5（可重複）"}
+                        {s.key === "random15" && "此系列總上限 3（可重複）"}
+                        {s.key === "extreme" && "每款限 1，系列總上限 3"}
+                        {s.key === "other" && "每款限 1"}
+                      </div>
                     </div>
+
+                    <span className="text-gray-500">
+                      {expanded[s.key] ? "▲ 收起" : "▼ 展開"}
+                    </span>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <button
-                      className="px-2 py-1 rounded border"
-                      onClick={() => addToCart(p.id)}
-                    >
-                      加入
-                    </button>
-                  </div>
+
+                  {/* 展開後的子商品列表 */}
+                  {expanded[s.key] && (
+                    <div className="mt-3 grid grid-cols-2 gap-2">
+                      {s.items.map((item) => (
+                        <div
+                          key={item.id}
+                          className="border rounded p-3 flex flex-col justify-between items-center"
+                        >
+                          <div className="font-medium">{item.name}</div>
+                          {item.imageFile && (
+                            <img
+                              src={`/img/${item.imageFile}`}
+                              alt={item.name}
+                              className="w-24 h-24 object-contain mb-2"
+                            />
+                          )}
+                          <button
+                            className="px-3 py-1 rounded border hover:bg-gray-100"
+                            onClick={() => addToCart(item.id)}
+                          >
+                            加入
+                          </button>
+                        </div>
+                      ))}
+                    </div>
+                  )}
                 </div>
               ))}
             </div>
