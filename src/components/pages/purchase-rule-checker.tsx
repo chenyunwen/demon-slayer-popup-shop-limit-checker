@@ -149,6 +149,7 @@ export default function PurchaseRuleChecker() {
         商品清單感謝脆友{" "}
         <a
           href="https://www.threads.com/@iris_sy_du"
+          target="blank"
           className="underline underline-offset-2"
         >
           @iris_sy_du
@@ -156,6 +157,7 @@ export default function PurchaseRuleChecker() {
         及{" "}
         <a
           href="https://www.threads.com/@kawaiii_1228"
+          target="blank"
           className="underline underline-offset-2"
         >
           @kawaiii_1228
@@ -163,6 +165,7 @@ export default function PurchaseRuleChecker() {
         提供使用！內容來源原文件網址
         <a
           href="https://docs.google.com/document/d/1mxL58ZN7Y-HBvRDCUsKSrvJZyDl8wEcVc_YauleMNA4/edit?usp=sharing"
+          target="blank"
           className="underline underline-offset-2"
         >
           在此
@@ -173,6 +176,7 @@ export default function PurchaseRuleChecker() {
         業餘時間抽空製作，若有任何錯誤、不完整、可改善之處之可至
         <a
           href="https://www.threads.com/@miyu_murmur/post/DP4cS8JEtRv?xmt=AQF0dmE_ElHHq5yLcRjLZ_tw8qtqMTBRGLlrSqjLgN_9TQ"
+          target="blank"
           className="underline underline-offset-2"
         >
           此篇脆文
