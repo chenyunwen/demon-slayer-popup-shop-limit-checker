@@ -5,16 +5,10 @@
     "limit": 5,
     "items": [
       {
-        "id": "40_Tanjirou",
-        "name": "竈門炭治郎",
-        "category": "random40",
-        "imageFile": "40_Tanjirou.jpg"
-      },
-      {
-        "id": "40_Kanao",
-        "name": "栗花落香奈乎",
-        "category": "random40",
-        "imageFile": "40_Kanao.jpg"
+        "id": "random40_1",
+        "name": "隊士百景/柱百景 隨機40款徽章 盲抽",
+        "price": 180,
+        "category": "random40"
       }
     ]
   },
@@ -24,16 +18,28 @@
     "limit": 3,
     "items": [
       {
-        "id": "15_Giyuu",
-        "name": "富岡義勇",
-        "category": "random15",
-        "imageFile": "15_Giyuu.jpg"
+        "id": "random15_1",
+        "name": "隊士百景/柱百景 隨機15款胸章(方) 盲抽",
+        "price": 180,
+        "category": "random15"
       },
       {
-        "id": "15_Tokitou",
-        "name": "時透無一郎",
-        "category": "random15",
-        "imageFile": "15_Tokitou.jpg"
+        "id": "random15_2",
+        "name": "隊士百景/柱百景 隨機15款別針 盲抽",
+        "price": 210,
+        "category": "random15"
+      },
+      {
+        "id": "random15_3",
+        "name": "隊士百景/柱百景 隨機15款壓克力吊飾 盲抽 (大約3cm x 5cm)",
+        "price": 200,
+        "category": "random15"
+      },
+      {
+        "id": "random15_4",
+        "name": "隊士百景/柱百景 隨機15款名言卡 盲抽",
+        "price": 150,
+        "category": "random15"
       }
     ]
   },
@@ -44,15 +50,75 @@
     "items": [
       {
         "id": "extreme_1",
-        "name": "色紙 A款",
-        "category": "extreme",
-        "imageFile": "extreme_1.jpg"
+        "name": "原畫資料夾 (立志編、無線列車、遊郭編、刀匠村、柱訓練) ",
+        "price": 260,
+        "category": "extreme"
       },
       {
         "id": "extreme_2",
-        "name": "色紙 B款",
-        "category": "extreme",
-        "imageFile": "extreme_2.jpg"
+        "name": "立志編1-13、立志編14-26 原畫集 (厚)",
+        "price": 1180,
+        "category": "extreme"
+      },
+      {
+        "id": "extreme_3",
+        "name": "無線列車篇 原畫集 (厚)",
+        "price": 1580,
+        "category": "extreme"
+      },
+      {
+        "id": "extreme_4",
+        "name": "遊郭篇 原畫集 ",
+        "price": 1890,
+        "category": "extreme"
+      },
+      {
+        "id": "extreme_5",
+        "name": "A6 原畫壓克力色紙 9柱+炭禰善豬+無慘+OP ",
+        "price": 480,
+        "category": "extreme"
+      },
+      {
+        "id": "extreme_6",
+        "name": "迷你Q版連結立牌 (俗稱舉手立牌) 極限量 盲抽 第一彈、第二彈、第三彈、第六彈",
+        "price": 300,
+        "category": "extreme"
+      },
+      {
+        "id": "extreme_7",
+        "name": "迷你Q版連結徽章 (舉手的徽章，一份有兩種)",
+        "price": 280,
+        "category": "extreme"
+      },
+      {
+        "id": "extreme_8",
+        "name": "原畫資料夾 (立志篇、遊郭篇) ",
+        "price": 260,
+        "category": "extreme"
+      },
+      {
+        "id": "extreme_9",
+        "name": "煉獄杏壽郎台詞冊(含一串貼紙)",
+        "price": 2890,
+        "category": "extreme"
+      },
+      {
+        "id": "extreme_10",
+        "name": "煉獄杏壽郎披風外套",
+        "price": 2380,
+        "category": "extreme"
+      },
+      {
+        "id": "extreme_11",
+        "name": "煉獄杏壽郎無線列車名言卡(A~D池)",
+        "price": 150,
+        "category": "extreme"
+      },
+      {
+        "id": "extreme_12",
+        "name": "長方形主視覺色紙(共8款) (水呼組手鬼禰豆子款、兄妹款、無限列車款、遊郭篇前上陸音柱三小隻款、遊郭篇音柱和花魁的三小隻款、刀匠村篇款、九柱和炭款、無慘和炭款)",
+        "price": 630,
+        "category": "extreme"
       }
     ]
   },
@@ -62,18 +128,249 @@
     "limit": 1,
     "items": [
       {
-        "id": "other-1",
-        "name": "不知道有甚麼",
+        "id": "other_1",
+        "name": "柱全集背包 (九柱)",
+        "price": 650,
         "category": "other"
       },
       {
-        "id": "other-2",
-        "name": "可能要去現場",
+        "id": "other_2",
+        "name": "應援徽章 (九柱+炭禰善豬)",
+        "price": 330,
         "category": "other"
       },
       {
-        "id": "other-3",
-        "name": "感受驚喜吧",
+        "id": "other_3",
+        "name": "柱陶瓷杯墊",
+        "price": 380,
+        "category": "other"
+      },
+      {
+        "id": "other_4",
+        "name": "原畫掛畫",
+        "price": 1890,
+        "category": "other"
+      },
+      {
+        "id": "other_5",
+        "name": "九柱上衣(分M、L尺寸)",
+        "price": 1280,
+        "category": "other"
+      },
+      {
+        "id": "other_6",
+        "name": "柱隨機動畫徽章",
+        "price": 260,
+        "category": "other"
+      },
+      {
+        "id": "other_7",
+        "name": "迷你場景壓克力",
+        "price": 330,
+        "category": "other"
+      },
+      {
+        "id": "other_8",
+        "name": "原畫線稿小卡 (立志編、無線列車、遊郭編、刀匠村) 盲抽",
+        "price": 160,
+        "category": "other"
+      },
+      {
+        "id": "other_9",
+        "name": "鬼滅立牌 (鬼) 杯墊 A、B、C版 盲抽",
+        "price": 380,
+        "category": "other"
+      },
+      {
+        "id": "other_10",
+        "name": "鬼眼罩 (上弦一以外)",
+        "price": 480,
+        "category": "other"
+      },
+      {
+        "id": "other_11",
+        "name": "鬼眼罩 (上弦一)",
+        "price": 630,
+        "category": "other"
+      },
+      {
+        "id": "other_12",
+        "name": "鬼眼睛徽章 (上弦)",
+        "price": 280,
+        "category": "other"
+      },
+      {
+        "id": "other_13",
+        "name": "2025 花火節立牌 前期 盲抽",
+        "price": 280,
+        "category": "other"
+      },
+      {
+        "id": "other_14",
+        "name": "2025 草莓季立牌(A、B池) 盲抽",
+        "price": 280,
+        "category": "other"
+      },
+      {
+        "id": "other_15",
+        "name": "2024 萬聖節杯墊 盲抽",
+        "price": 280,
+        "category": "other"
+      },
+      {
+        "id": "other_16",
+        "name": "2023 萬聖節資料夾",
+        "price": 150,
+        "category": "other"
+      },
+      {
+        "id": "other_17",
+        "name": "2024 萬聖節資料夾",
+        "price": 180,
+        "category": "other"
+      },
+      {
+        "id": "other_18",
+        "name": "2024 萬聖節眾人眼鏡布(A、B款)",
+        "price": 280,
+        "category": "other"
+      },
+      {
+        "id": "other_19",
+        "name": "2024 萬聖節魔法風卡(9款) 盲抽",
+        "price": 210,
+        "category": "other"
+      },
+      {
+        "id": "other_20",
+        "name": "2024 萬聖節隊士貼紙包(A、B款)",
+        "price": 380,
+        "category": "other"
+      },
+      {
+        "id": "other_21",
+        "name": "2024 萬聖節杯墊 盲抽",
+        "price": 280,
+        "category": "other"
+      },
+      {
+        "id": "other_22",
+        "name": "2024 萬聖節立牌(A、B款) 盲抽",
+        "price": 280,
+        "category": "other"
+      },
+      {
+        "id": "other_23",
+        "name": "2024 萬聖節透明書籤(A、B款) 盲抽",
+        "price": 300,
+        "category": "other"
+      },
+      {
+        "id": "other_24",
+        "name": "2024 萬聖節票卡(A、B款) 盲抽",
+        "price": 150,
+        "category": "other"
+      },
+      {
+        "id": "other_25",
+        "name": "2024 萬聖節化妝包",
+        "price": 560,
+        "category": "other"
+      },
+      {
+        "id": "other_26",
+        "name": "2024 萬聖節小收納袋",
+        "price": 700,
+        "category": "other"
+      },
+      {
+        "id": "other_27",
+        "name": "2024 萬聖節吊飾 (九柱無水蟲、珠世、炭禰善豬)",
+        "price": 380,
+        "category": "other"
+      },
+      {
+        "id": "other_28",
+        "name": "2024 萬聖節透卡 B組 盲抽",
+        "price": 210,
+        "category": "other"
+      },
+      {
+        "id": "other_29",
+        "name": "2023 萬聖節夜光搖晃吊飾 A組 盲抽",
+        "price": 200,
+        "category": "other"
+      },
+      {
+        "id": "other_30",
+        "name": "無限城第一章合作咖啡廳第一期水呼組徽章 (7款) 盲抽",
+        "price": 260,
+        "category": "other"
+      },
+      {
+        "id": "other_31",
+        "name": "餐廳新店鋪記念原畫流蘇吊牌(兄妹款)",
+        "price": 220,
+        "category": "other"
+      },
+      {
+        "id": "other_32",
+        "name": "餐廳新店鋪記念插畫流蘇吊牌(兄妹款)",
+        "price": 220,
+        "category": "other"
+      },
+      {
+        "id": "other_33",
+        "name": "餐廳新店鋪記念原畫壓克力立牌 (全八款) 盲抽 有霞",
+        "price": 400,
+        "category": "other"
+      },
+      {
+        "id": "other_34",
+        "name": "餐廳新店鋪記念隨機附背景壓克力 (全五款) 盲抽 有風",
+        "price": 480,
+        "category": "other"
+      },
+      {
+        "id": "other_35",
+        "name": "收納盒 盲抽 (立志篇炭治郎、無線列車篇煉獄、遊郭篇、刀匠村)",
+        "price": 380,
+        "category": "other"
+      },
+      {
+        "id": "other_36",
+        "name": "柱咖啡廳 光柵徽章(小) 盲抽 (九柱、柱訓練第四集、柱訓練第八集、水之呼吸)",
+        "price": 260,
+        "category": "other"
+      },
+      {
+        "id": "other_37",
+        "name": "柱咖啡廳 富岡義勇明信片收納夾 ",
+        "price": 780,
+        "category": "other"
+      },
+      {
+        "id": "other_38",
+        "name": "柱咖啡廳九柱迷你場景立牌 盲抽",
+        "price": 330,
+        "category": "other"
+      },
+      {
+        "id": "other_39",
+        "name": "無限城第一期 盲抽 (含特別賞、徽章、拍立得、透明卡、金屬風格明信片等)",
+        "price": 200,
+        "category": "other"
+      },
+      {
+        "id": "other_40",
+        "name": "鬼全身立牌(上弦一~六，半天狗各種型態都有、佛堂鬼、沼澤鬼、手毬鬼、累哥哥、魘夢、下弦弍、下弦叁、下弦肆、下弦陸)",
+        "price": 280,
+        "category": "other"
+      },
+      {
+        "id": "other_41",
+        "name": "鬼全身立牌(手鬼)",
+        "price": 480,
         "category": "other"
       }
     ]

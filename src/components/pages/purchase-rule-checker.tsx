@@ -141,8 +141,47 @@ export default function PurchaseRuleChecker() {
 
   return (
     <div className="p-6 max-w-5xl mx-auto">
-      <h1 className="text-2xl font-semibold mb-4">鬼滅百景｜購物數量計算器</h1>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <h1 className="text-2xl font-semibold">鬼滅百景｜購物數量計算器</h1>
+      <div className="text-red-700 my-2">
+        此網頁為粉絲自行製作，僅供參考，不保證完全正確，一切規則還請以官方公布內容為準。
+      </div>
+      <div className="text-subText my-2">
+        商品清單感謝脆友{" "}
+        <a
+          href="https://www.threads.com/@iris_sy_du"
+          className="underline underline-offset-2"
+        >
+          @iris_sy_du
+        </a>{" "}
+        及{" "}
+        <a
+          href="https://www.threads.com/@kawaiii_1228"
+          className="underline underline-offset-2"
+        >
+          @kawaiii_1228
+        </a>{" "}
+        提供使用！內容來源原文件網址
+        <a
+          href="https://docs.google.com/document/d/1mxL58ZN7Y-HBvRDCUsKSrvJZyDl8wEcVc_YauleMNA4/edit?usp=sharing"
+          className="underline underline-offset-2"
+        >
+          在此
+        </a>
+        ，裡面與有更多與展覽相關的介紹，非常用心！
+      </div>
+      <div className="text-subText my-2">
+        業餘時間抽空製作，若有任何錯誤、不完整、可改善之處之可至
+        <a
+          href="https://www.threads.com/@miyu_murmur/post/DP4cS8JEtRv?xmt=AQF0dmE_ElHHq5yLcRjLZ_tw8qtqMTBRGLlrSqjLgN_9TQ"
+          className="underline underline-offset-2"
+        >
+          此篇脆文
+        </a>
+        下方留言回報，心有餘力時會盡量修改，請勿過度催促、惡意謾罵，謝謝大家！祝大家搶票/排隊順利、逛展愉快！
+        <br />
+        最後更新時間：2025/10/18 04:30
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-4">
         <div className="md:col-span-2">
           <section className="mb-4">
             <h2 className="text-lg font-medium">商品清單</h2>
@@ -366,7 +405,7 @@ export default function PurchaseRuleChecker() {
 
       <footer className="mt-6 text-sm text-subText">
         <div>
-          說明：此網頁為粉絲自行製作，非官方提供，不保證完全正確，一切規則還請以官方公布內容為準。
+          此網頁為粉絲自行製作，非官方提供，不保證完全正確，一切規則還請以官方公布內容為準。
         </div>
       </footer>
     </div>
