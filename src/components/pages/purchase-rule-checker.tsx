@@ -1,50 +1,12 @@
 "use client";
-import React, { useMemo, useState } from "react";
-import sampleSeries from "@/../public/products.json";
+import React, { useMemo, useState } from 'react';
+
+import sampleSeries from '@/../public/products.json';
+import { CartItem, CATEGORY_LABELS, Product, ProductSeries } from '@/constants';
+
+import FloatingCart from '../ui/floating-cart';
 
 const SAMPLE_SERIES = sampleSeries as ProductSeries[];
-// 資料與程式說明 (繁體中文註解)
-// - 單檔 React + TypeScript 範例，可放在 Next.js 或 Create React App 中。
-// - 使用 Tailwind CSS class 作為樣式（如未安裝可自行改為一般 class）。
-// - 功能：範例商品清單、加入購物車、數量調整、即時檢查是否違反規則，並顯示違規原因。
-
-// 規則回顧：
-// 規則1️⃣ 隨機系列商品
-// ・random40 (共40款)：每人限購 5 個（可重複同款）
-// ・random15 (共15款)：每人限購 3 個（可重複同款）
-// 規則2️⃣
-// ・extreme（極限量）：每人限購 3 個，且品項不得重複（同款數量 <=1）
-// ・other（其他品項）：每人限購 1 個（每款 <=1）
-// 規則3️⃣
-// ・結帳總數量最多不得超過 25 個
-
-type Category = "random40" | "random15" | "extreme" | "other";
-
-const CATEGORY_LABELS: Record<Category, string> = {
-  random40: "隨機系列 40",
-  random15: "隨機系列 15",
-  extreme: "極限量商品",
-  other: "其他品項",
-};
-
-type Product = {
-  id: string;
-  name: string;
-  category: Category;
-  imageFile?: string;
-};
-
-type ProductSeries = {
-  key: Category;
-  name: string;
-  limit: number;
-  items: Product[];
-};
-
-type CartItem = {
-  product: Product;
-  qty: number;
-};
 
 export default function PurchaseRuleChecker() {
   // series (原本的 products 陣列) — 每個 series 包含 items
@@ -90,15 +52,33 @@ export default function PurchaseRuleChecker() {
     });
   }
 
+  // const cartItems = useMemo<CartItem[]>(() => {
+  //   return Object.entries(cart)
+  //     .map(([id, qty]) => {
+  //       const p = flatProducts.find((fp) => fp.id === id);
+  //       if (!p) return null;
+  //       return { product: p, qty };
+  //     })
+  //     .filter((x): x is CartItem => x !== null);
+  // }, [cart, flatProducts]);
+
   const cartItems = useMemo<CartItem[]>(() => {
     return Object.entries(cart)
       .map(([id, qty]) => {
-        const p = flatProducts.find((fp) => fp.id === id);
-        if (!p) return null;
-        return { product: p, qty };
+        const product = flatProducts.find((fp) => fp.id === id);
+        if (!product) return null;
+
+        const subtotal = (product.price ?? 0) * qty;
+
+        return { product, qty, subtotal };
       })
       .filter((x): x is CartItem => x !== null);
   }, [cart, flatProducts]);
+
+  // 💰 總金額
+  const totalAmount = useMemo(() => {
+    return cartItems.reduce((sum, item) => sum + item.subtotal, 0);
+  }, [cartItems]);
 
   // 驗證邏輯（與你原本相同）
   function validateCart(items: CartItem[]) {
@@ -161,7 +141,7 @@ export default function PurchaseRuleChecker() {
 
   return (
     <div className="p-6 max-w-5xl mx-auto">
-      <h1 className="text-2xl font-semibold mb-4">鬼滅百景 購物限購檢查器</h1>
+      <h1 className="text-2xl font-semibold mb-4">鬼滅百景｜購物數量計算器</h1>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div className="md:col-span-2">
           <section className="mb-4">
@@ -181,7 +161,7 @@ export default function PurchaseRuleChecker() {
                   >
                     <div className="flex flex-col">
                       <h2 className="font-bold text-lg">{s.name}</h2>
-                      <div className="text-xs text-gray-500">
+                      <div className="text-xs text-subText">
                         {s.key === "random40" && "此系列總上限 5（可重複）"}
                         {s.key === "random15" && "此系列總上限 3（可重複）"}
                         {s.key === "extreme" && "每款限 1，系列總上限 3"}
@@ -189,9 +169,9 @@ export default function PurchaseRuleChecker() {
                       </div>
                     </div>
 
-                    <span className="text-gray-500">
+                    <button className="text-subText">
                       {expanded[s.key] ? "▲ 收起" : "▼ 展開"}
-                    </span>
+                    </button>
                   </div>
 
                   {/* 展開後的子商品列表 */}
@@ -210,8 +190,11 @@ export default function PurchaseRuleChecker() {
                               className="w-24 h-24 object-contain mb-2"
                             />
                           )}
+                          <div className="text-sm pt-0.5 pb-1 text-subText">
+                            {item?.price ? `$ ${item.price}` : "無價格資料"}
+                          </div>
                           <button
-                            className="px-3 py-1 rounded border hover:bg-gray-100"
+                            className="px-3 py-1 rounded border hover:bg-gray-100 transition-transform duration-200 active:scale-95 hover:scale-110"
                             onClick={() => addToCart(item.id)}
                           >
                             加入
@@ -225,10 +208,10 @@ export default function PurchaseRuleChecker() {
             </div>
           </section>
 
-          <section>
+          <section id="cart">
             <h2 className="text-lg font-medium">購物車</h2>
             {cartItems.length === 0 ? (
-              <div className="mt-3 text-gray-600">購物車為空</div>
+              <div className="mt-3 text-subText">購物車為空</div>
             ) : (
               <div className="mt-3 space-y-2">
                 {cartItems.map((it) => (
@@ -238,11 +221,16 @@ export default function PurchaseRuleChecker() {
                   >
                     <div>
                       <div className="font-medium">{it.product.name}</div>
-                      <div className="text-sm text-gray-600">
+                      <div className="text-xs text-hint">
                         {CATEGORY_LABELS[it.product.category]}
                       </div>
+                      <div className="text-sm text-subtext">
+                        {it.product.price
+                          ? `$ ${it.product.price} 元`
+                          : "無價格資料"}
+                      </div>
                     </div>
-                    <div className="flex items-center gap-2">
+                    <div className="flex items-center gap-2 ">
                       <button
                         className="px-2 py-1 border rounded"
                         onClick={() => removeOne(it.product.id)}
@@ -251,14 +239,21 @@ export default function PurchaseRuleChecker() {
                       </button>
                       <input
                         type="number"
-                        className="w-16 text-center border rounded px-1"
+                        className="w-16 text-center border rounded px-1 py-1"
                         value={it.qty}
-                        min={0}
-                        onChange={(e) =>
-                          setQty(
-                            it.product.id,
-                            Math.max(0, Number(e.target.value))
-                          )
+                        min={1}
+                        step={1}
+                        onChange={
+                          (e) => {
+                            const value = Math.floor(Number(e.target.value)); // 只取整數
+                            const safeValue =
+                              isNaN(value) || value < 1 ? 1 : value; // 限制至少為 1
+                            setQty(it.product.id, safeValue);
+                          }
+                          // setQty(
+                          //   it.product.id,
+                          //   Math.max(0, Number(e.target.value))
+                          // )
                         }
                       />
                       <button
@@ -276,12 +271,19 @@ export default function PurchaseRuleChecker() {
                     </div>
                   </div>
                 ))}
-                <div className="text-sm text-gray-700">
+                <div className="text-sm text-subText">
                   總數：{cartItems.reduce((s, i) => s + i.qty, 0)} 件
+                </div>
+                <div className="text-sm text-subText">
+                  總金額：{totalAmount} 元
+                </div>
+                <div className="text-sm text-red-700">
+                  注意！總金額未包含無價格資料之商品！
                 </div>
               </div>
             )}
           </section>
+          <FloatingCart totalItems={cartItems.reduce((s, i) => s + i.qty, 0)} />
         </div>
 
         <aside className="border rounded p-4">
@@ -362,11 +364,11 @@ export default function PurchaseRuleChecker() {
         </aside>
       </div>
 
-      {/* <footer className="mt-6 text-sm text-gray-600">
+      <footer className="mt-6 text-sm text-subText">
         <div>
-          說明：此範例著重前端檢查邏輯。正式上線應在後端再次驗證，以避免使用者繞過前端規則。
+          說明：此網頁為粉絲自行製作，非官方提供，不保證完全正確，一切規則還請以官方公布內容為準。
         </div>
-      </footer> */}
+      </footer>
     </div>
   );
 }

@@ -6,13 +6,13 @@
     "items": [
       {
         "id": "40_Tanjirou",
-        "name": "炭治郎",
+        "name": "竈門炭治郎",
         "category": "random40",
         "imageFile": "40_Tanjirou.jpg"
       },
       {
         "id": "40_Kanao",
-        "name": "香奈乎",
+        "name": "栗花落香奈乎",
         "category": "random40",
         "imageFile": "40_Kanao.jpg"
       }
@@ -62,17 +62,17 @@
     "limit": 1,
     "items": [
       {
-        "id": "O-1",
+        "id": "other-1",
         "name": "不知道有甚麼",
         "category": "other"
       },
       {
-        "id": "O-2",
+        "id": "other-2",
         "name": "可能要去現場",
         "category": "other"
       },
       {
-        "id": "O-3",
+        "id": "other-3",
         "name": "感受驚喜吧",
         "category": "other"
       }
