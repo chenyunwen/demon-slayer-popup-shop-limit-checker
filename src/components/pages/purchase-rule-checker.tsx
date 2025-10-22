@@ -1,10 +1,10 @@
 "use client";
-import React, { useMemo, useState } from 'react';
+import React, { useMemo, useState } from "react";
 
-import sampleSeries from '@/../public/products.json';
-import { CartItem, CATEGORY_LABELS, Product, ProductSeries } from '@/constants';
+import sampleSeries from "@/../public/products.json";
+import { CartItem, CATEGORY_LABELS, Product, ProductSeries } from "@/constants";
 
-import FloatingCart from '../ui/floating-cart';
+import FloatingCart from "../ui/floating-cart";
 
 const SAMPLE_SERIES = sampleSeries as ProductSeries[];
 
@@ -64,8 +64,8 @@ export default function PurchaseRuleChecker() {
 
   const cartItems = useMemo<CartItem[]>(() => {
     return Object.entries(cart)
-      .map(([id, qty]) => {
-        const product = flatProducts.find((fp) => fp.id === id);
+      .map(([name, qty]) => {
+        const product = flatProducts.find((fp) => fp.name === name);
         if (!product) return null;
 
         const subtotal = (product.price ?? 0) * qty;
@@ -141,12 +141,70 @@ export default function PurchaseRuleChecker() {
 
   return (
     <div className="p-6 max-w-5xl mx-auto">
-      <h1 className="text-2xl font-semibold mb-4">鬼滅百景｜購物數量計算器</h1>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <h1 className="text-2xl font-semibold">鬼滅百景｜購物數量計算器</h1>
+      <div className="text-red-700 my-2">
+        此網頁為粉絲自行製作，僅供參考，不保證完全正確，一切規則還請以官方公布內容為準。
+      </div>
+      <div className="text-subText my-2">
+        商品清單感謝脆友{" "}
+        <a
+          href="https://www.threads.com/@iris_sy_du"
+          target="blank"
+          className="underline underline-offset-2"
+        >
+          @iris_sy_du
+        </a>{" "}
+        及{" "}
+        <a
+          href="https://www.threads.com/@kawaiii_1228"
+          target="blank"
+          className="underline underline-offset-2"
+        >
+          @kawaiii_1228
+        </a>{" "}
+        提供參考及使用！原文件網址
+        <a
+          href="https://docs.google.com/document/d/1mxL58ZN7Y-HBvRDCUsKSrvJZyDl8wEcVc_YauleMNA4/edit?usp=sharing"
+          target="blank"
+          className="underline underline-offset-2"
+        >
+          在此
+        </a>
+        ，裡面與有更多與展覽相關的介紹，非常用心！
+      </div>
+      <div className="text-subText my-2">
+        隨機40款及15款盲抽的圖片皆來自
+        <a
+          href="https://www.ufotable.co.jp/kimetsu/event/hyakkei2025/"
+          target="blank"
+          className="underline underline-offset-2"
+        >
+          官網
+        </a>
+        。
+      </div>
+      <div className="text-subText my-2">
+        業餘時間抽空製作，若有任何錯誤、不完整、可改善之處之可至
+        <a
+          href="https://www.threads.com/@miyu_murmur/post/DP4cS8JEtRv?xmt=AQF0dmE_ElHHq5yLcRjLZ_tw8qtqMTBRGLlrSqjLgN_9TQ"
+          target="blank"
+          className="underline underline-offset-2"
+        >
+          此篇脆文
+        </a>
+        下方留言回報，心有餘力時會盡量修改，請勿過度催促、惡意謾罵，謝謝大家！祝大家搶票/排隊順利、逛展愉快！
+        <br />
+        最後更新時間：2025/10/22 14:30
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-4">
+        {/* <div className="md:col-span-2"> */}
         <div className="md:col-span-2">
           <section className="mb-4">
             <h2 className="text-lg font-medium">商品清單</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-3">
+            <span className="text-subText text-xs">
+              點擊圖片可在新視窗中察看
+            </span>
+            <div className="grid grid-cols-1  gap-3 mt-3">
               {series.map((s) => (
                 <div key={s.key} className="border rounded p-3">
                   {/* 系列標題區 */}
@@ -179,7 +237,7 @@ export default function PurchaseRuleChecker() {
                     <div className="mt-3 grid grid-cols-2 gap-2">
                       {s.items.map((item) => (
                         <div
-                          key={item.id}
+                          key={item.name}
                           className="border rounded p-3 flex flex-col justify-between items-center"
                         >
                           <div className="font-medium">{item.name}</div>
@@ -190,12 +248,21 @@ export default function PurchaseRuleChecker() {
                               className="w-24 h-24 object-contain mb-2"
                             />
                           )}
+                          {item.imageUrl && (
+                            <a href={item.imageUrl} target="blank">
+                              <img
+                                src={item.imageUrl}
+                                alt={item.name}
+                                className="w-24 h-24 object-contain mb-2"
+                              />
+                            </a>
+                          )}
                           <div className="text-sm pt-0.5 pb-1 text-subText">
                             {item?.price ? `$ ${item.price}` : "無價格資料"}
                           </div>
                           <button
                             className="px-3 py-1 rounded border hover:bg-gray-100 transition-transform duration-200 active:scale-95 hover:scale-110"
-                            onClick={() => addToCart(item.id)}
+                            onClick={() => addToCart(item.name)}
                           >
                             加入
                           </button>
@@ -216,7 +283,7 @@ export default function PurchaseRuleChecker() {
               <div className="mt-3 space-y-2">
                 {cartItems.map((it) => (
                   <div
-                    key={it.product.id}
+                    key={it.product.name}
                     className="flex items-center justify-between border rounded p-2"
                   >
                     <div>
@@ -233,7 +300,7 @@ export default function PurchaseRuleChecker() {
                     <div className="flex items-center gap-2 ">
                       <button
                         className="px-2 py-1 border rounded"
-                        onClick={() => removeOne(it.product.id)}
+                        onClick={() => removeOne(it.product.name)}
                       >
                         -
                       </button>
@@ -248,7 +315,7 @@ export default function PurchaseRuleChecker() {
                             const value = Math.floor(Number(e.target.value)); // 只取整數
                             const safeValue =
                               isNaN(value) || value < 1 ? 1 : value; // 限制至少為 1
-                            setQty(it.product.id, safeValue);
+                            setQty(it.product.name, safeValue);
                           }
                           // setQty(
                           //   it.product.id,
@@ -258,13 +325,13 @@ export default function PurchaseRuleChecker() {
                       />
                       <button
                         className="px-2 py-1 border rounded"
-                        onClick={() => setQty(it.product.id, it.qty + 1)}
+                        onClick={() => setQty(it.product.name, it.qty + 1)}
                       >
                         +
                       </button>
                       <button
                         className="px-2 py-1 border rounded bg-red-500 text-white hover:bg-red-600"
-                        onClick={() => setQty(it.product.id, 0)}
+                        onClick={() => setQty(it.product.name, 0)}
                       >
                         刪除
                       </button>
@@ -366,7 +433,7 @@ export default function PurchaseRuleChecker() {
 
       <footer className="mt-6 text-sm text-subText">
         <div>
-          說明：此網頁為粉絲自行製作，非官方提供，不保證完全正確，一切規則還請以官方公布內容為準。
+          此網頁為粉絲自行製作，非官方提供，不保證完全正確，一切規則還請以官方公布內容為準。
         </div>
       </footer>
     </div>

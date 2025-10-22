@@ -19,11 +19,12 @@ export const CATEGORY_LABELS: Record<Category, string> = {
 };
 
 export type Product = {
-  id: string;
+  // id: string;
   name: string;
   category: Category;
   price?: number;
   imageFile?: string;
+  imageUrl?: string;
 };
 
 export type ProductSeries = {
