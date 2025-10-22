@@ -5,9 +5,105 @@
     "limit": 5,
     "items": [
       {
-        "id": "random40_1",
-        "name": "隊士百景/柱百景 隨機40款徽章 盲抽",
+        "name": "隊士百景 隨機40款徽章 竈門炭治郎",
         "price": 180,
+        "category": "random40",
+        "imageUrl": "https://www.ufotable.co.jp/kimetsu/event/hyakkei2025/img/goods/emotional-c_tanjiro.webp"
+      },
+      {
+        "name": "隊士百景 隨機40款徽章 竈門禰豆子",
+        "price": 180,
+        "category": "random40",
+        "imageUrl": "https://www.ufotable.co.jp/kimetsu/event/hyakkei2025/img/goods/emotional-c_nezuko.webp"
+      },
+      {
+        "name": "隊士百景 隨機40款徽章 我妻善逸",
+        "price": 180,
+        "category": "random40",
+        "imageUrl": "https://www.ufotable.co.jp/kimetsu/event/hyakkei2025/img/goods/emotional-c_zenitsu.webp"
+      },
+      {
+        "name": "隊士百景 隨機40款徽章 嘴平伊之助",
+        "price": 180,
+        "category": "random40",
+        "imageUrl": "https://www.ufotable.co.jp/kimetsu/event/hyakkei2025/img/goods/emotional-c_inosuke.webp"
+      },
+      {
+        "name": "隊士百景 隨機40款徽章 栗花落カナヲ",
+        "price": 180,
+        "category": "random40",
+        "imageUrl": "https://www.ufotable.co.jp/kimetsu/event/hyakkei2025/img/goods/emotional-c_kanao.webp"
+      },
+      {
+        "name": "隊士百景 隨機40款徽章 不死川玄弥",
+        "price": 180,
+        "category": "random40",
+        "imageUrl": "https://www.ufotable.co.jp/kimetsu/event/hyakkei2025/img/goods/emotional-c_genya.webp"
+      },
+      {
+        "name": "隊士百景～半 隨機20款徽章 村田（不確定算不算在這）",
+        "price": 180,
+        "category": "random40",
+        "imageUrl": "https://www.ufotable.co.jp/kimetsu/event/hyakkei2025/img/goods/emotional-c_murata.webp"
+      },
+
+      {
+        "name": "柱百景 隨機40款徽章 冨岡義勇",
+        "price": 180,
+        "category": "random40",
+        "imageUrl": "https://www.ufotable.co.jp/kimetsu/event/hyakkei2025/img/goods/emotional-c_giyu.webp"
+      },
+      {
+        "name": "柱百景 隨機40款徽章 胡蝶しのぶ",
+        "price": 180,
+        "category": "random40",
+        "imageUrl": "https://www.ufotable.co.jp/kimetsu/event/hyakkei2025/img/goods/emotional-c_shinobu.webp"
+      },
+      {
+        "name": "柱百景 隨機40款徽章 煉獄杏寿郎",
+        "price": 180,
+        "category": "random40",
+        "imageUrl": "https://www.ufotable.co.jp/kimetsu/event/hyakkei2025/img/goods/emotional-c_rengoku.webp"
+      },
+      {
+        "name": "柱百景 隨機40款徽章 宇髄天元",
+        "price": 180,
+        "category": "random40",
+        "imageUrl": "https://www.ufotable.co.jp/kimetsu/event/hyakkei2025/img/goods/emotional-c_uzui.webp"
+      },
+      {
+        "name": "柱百景 隨機40款徽章 時透無一郎",
+        "price": 180,
+        "category": "random40",
+        "imageUrl": "https://www.ufotable.co.jp/kimetsu/event/hyakkei2025/img/goods/emotional-c_muichiro.webp"
+      },
+      {
+        "name": "柱百景 隨機40款徽章 甘露寺蜜璃",
+        "price": 180,
+        "category": "random40",
+        "imageUrl": "https://www.ufotable.co.jp/kimetsu/event/hyakkei2025/img/goods/emotional-c_mitsuri.webp"
+      },
+      {
+        "name": "柱百景 隨機40款徽章 不死川実弥",
+        "price": 180,
+        "category": "random40",
+        "imageUrl": "https://www.ufotable.co.jp/kimetsu/event/hyakkei2025/img/goods/emotional-c_sanemi.webp"
+      },
+      {
+        "name": "柱百景 隨機40款徽章 伊黒小芭内",
+        "price": 180,
+        "category": "random40",
+        "imageUrl": "https://www.ufotable.co.jp/kimetsu/event/hyakkei2025/img/goods/emotional-c_iguro.webp"
+      },
+      {
+        "name": "柱百景 隨機40款徽章 悲鳴嶼行冥",
+        "price": 180,
+        "category": "random40",
+        "imageUrl": "https://www.ufotable.co.jp/kimetsu/event/hyakkei2025/img/goods/emotional-c_himejima.webp"
+      },
+
+      {
+        "name": "其他未放上的隨機40款物（供計數用）",
         "category": "random40"
       }
     ]
@@ -18,27 +114,394 @@
     "limit": 3,
     "items": [
       {
-        "id": "random15_1",
-        "name": "隊士百景/柱百景 隨機15款胸章(方) 盲抽",
+        "name": "隊士百景 隨機15款胸章(方) 竈門炭治郎",
         "price": 180,
-        "category": "random15"
+        "category": "random15",
+        "imageUrl": "https://www.ufotable.co.jp/kimetsu/event/hyakkei2025/img/goods/maniac-tanjiro.webp"
       },
       {
-        "id": "random15_2",
-        "name": "隊士百景/柱百景 隨機15款別針 盲抽",
+        "name": "隊士百景 隨機15款胸章(方) 竈門禰豆子",
+        "price": 180,
+        "category": "random15",
+        "imageUrl": "https://www.ufotable.co.jp/kimetsu/event/hyakkei2025/img/goods/maniac-nezuko.webp"
+      },
+      {
+        "name": "隊士百景 隨機15款胸章(方) 我妻善逸",
+        "price": 180,
+        "category": "random15",
+        "imageUrl": "https://www.ufotable.co.jp/kimetsu/event/hyakkei2025/img/goods/maniac-zenitsu.webp"
+      },
+      {
+        "name": "隊士百景 隨機15款胸章(方) 嘴平伊之助",
+        "price": 180,
+        "category": "random15",
+        "imageUrl": "https://www.ufotable.co.jp/kimetsu/event/hyakkei2025/img/goods/maniac-inosuke.webp"
+      },
+      {
+        "name": "隊士百景 隨機15款胸章(方) 栗花落カナヲ",
+        "price": 180,
+        "category": "random15",
+        "imageUrl": "https://www.ufotable.co.jp/kimetsu/event/hyakkei2025/img/goods/maniac-kanao.webp"
+      },
+      {
+        "name": "隊士百景 隨機15款胸章(方) 不死川玄弥",
+        "price": 180,
+        "category": "random15",
+        "imageUrl": "https://www.ufotable.co.jp/kimetsu/event/hyakkei2025/img/goods/maniac-genya.webp"
+      },
+      {
+        "name": "隊士百景～半 隨機7款胸章(方) 村田（不確定算不算在這）",
+        "price": 180,
+        "category": "random15",
+        "imageUrl": "https://www.ufotable.co.jp/kimetsu/event/hyakkei2025/img/goods/maniac-murata.webp"
+      },
+
+      {
+        "name": "柱百景 隨機15款胸章(方) 冨岡義勇",
+        "price": 180,
+        "category": "random15",
+        "imageUrl": "https://www.ufotable.co.jp/kimetsu/event/hyakkei2025/img/goods/maniac-giyu.webp"
+      },
+      {
+        "name": "柱百景 隨機15款胸章(方) 胡蝶しのぶ",
+        "price": 180,
+        "category": "random15",
+        "imageUrl": "https://www.ufotable.co.jp/kimetsu/event/hyakkei2025/img/goods/maniac-shinobu.webp"
+      },
+      {
+        "name": "柱百景 隨機15款胸章(方) 煉獄杏寿郎",
+        "price": 180,
+        "category": "random15",
+        "imageUrl": "https://www.ufotable.co.jp/kimetsu/event/hyakkei2025/img/goods/maniac-rengoku.webp"
+      },
+      {
+        "name": "柱百景 隨機15款胸章(方) 宇髄天元",
+        "price": 180,
+        "category": "random15",
+        "imageUrl": "https://www.ufotable.co.jp/kimetsu/event/hyakkei2025/img/goods/maniac-uzui.webp"
+      },
+      {
+        "name": "柱百景 隨機15款胸章(方) 時透無一郎",
+        "price": 180,
+        "category": "random15",
+        "imageUrl": "https://www.ufotable.co.jp/kimetsu/event/hyakkei2025/img/goods/maniac-muichiro.webp"
+      },
+      {
+        "name": "柱百景 隨機15款胸章(方) 甘露寺蜜璃",
+        "price": 180,
+        "category": "random15",
+        "imageUrl": "https://www.ufotable.co.jp/kimetsu/event/hyakkei2025/img/goods/maniac-mitsuri.webp"
+      },
+      {
+        "name": "柱百景 隨機15款胸章(方) 不死川実弥",
+        "price": 180,
+        "category": "random15",
+        "imageUrl": "https://www.ufotable.co.jp/kimetsu/event/hyakkei2025/img/goods/maniac-sanemi.webp"
+      },
+      {
+        "name": "柱百景 隨機15款胸章(方) 伊黒小芭内",
+        "price": 180,
+        "category": "random15",
+        "imageUrl": "https://www.ufotable.co.jp/kimetsu/event/hyakkei2025/img/goods/maniac-iguro.webp"
+      },
+      {
+        "name": "柱百景 隨機15款胸章(方) 悲鳴嶼行冥",
+        "price": 180,
+        "category": "random15",
+        "imageUrl": "https://www.ufotable.co.jp/kimetsu/event/hyakkei2025/img/goods/maniac-himejima.webp"
+      },
+
+      {
+        "name": "隊士百景 隨機15款別針 竈門炭治郎",
         "price": 210,
-        "category": "random15"
+        "category": "random15",
+        "imageUrl": "https://www.ufotable.co.jp/kimetsu/event/hyakkei2025/img/goods/pins-tanjiro.webp"
       },
       {
-        "id": "random15_3",
-        "name": "隊士百景/柱百景 隨機15款壓克力吊飾 盲抽 (大約3cm x 5cm)",
-        "price": 200,
-        "category": "random15"
+        "name": "隊士百景 隨機15款別針 竈門禰豆子",
+        "price": 210,
+        "category": "random15",
+        "imageUrl": "https://www.ufotable.co.jp/kimetsu/event/hyakkei2025/img/goods/pins-nezuko.webp"
       },
       {
-        "id": "random15_4",
-        "name": "隊士百景/柱百景 隨機15款名言卡 盲抽",
+        "name": "隊士百景 隨機15款別針 我妻善逸",
+        "price": 210,
+        "category": "random15",
+        "imageUrl": "https://www.ufotable.co.jp/kimetsu/event/hyakkei2025/img/goods/pins-zenitsu.webp"
+      },
+      {
+        "name": "隊士百景 隨機15款別針 嘴平伊之助",
+        "price": 210,
+        "category": "random15",
+        "imageUrl": "https://www.ufotable.co.jp/kimetsu/event/hyakkei2025/img/goods/pins-inosuke.webp"
+      },
+      {
+        "name": "隊士百景 隨機15款別針 栗花落カナヲ",
+        "price": 210,
+        "category": "random15",
+        "imageUrl": "https://www.ufotable.co.jp/kimetsu/event/hyakkei2025/img/goods/pins-kanao.webp"
+      },
+      {
+        "name": "隊士百景 隨機15款別針 不死川玄弥",
+        "price": 210,
+        "category": "random15",
+        "imageUrl": "https://www.ufotable.co.jp/kimetsu/event/hyakkei2025/img/goods/pins-genya.webp"
+      },
+      {
+        "name": "隊士百景～半 隨機7款別針 村田（不確定算不算在這）",
+        "price": 210,
+        "category": "random15",
+        "imageUrl": "https://www.ufotable.co.jp/kimetsu/event/hyakkei2025/img/goods/pins-murata.webp"
+      },
+      {
+        "name": "柱百景 隨機15款別針 冨岡義勇",
+        "price": 210,
+        "category": "random15",
+        "imageUrl": "https://www.ufotable.co.jp/kimetsu/event/hyakkei2025/img/goods/pins-giyu.webp"
+      },
+      {
+        "name": "柱百景 隨機15款別針 胡蝶しのぶ",
+        "price": 210,
+        "category": "random15",
+        "imageUrl": "https://www.ufotable.co.jp/kimetsu/event/hyakkei2025/img/goods/pins-shinobu.webp"
+      },
+      {
+        "name": "柱百景 隨機15款別針 煉獄杏寿郎",
+        "price": 210,
+        "category": "random15",
+        "imageUrl": "https://www.ufotable.co.jp/kimetsu/event/hyakkei2025/img/goods/pins-rengoku.webp"
+      },
+      {
+        "name": "柱百景 隨機15款別針 宇髄天元",
+        "price": 210,
+        "category": "random15",
+        "imageUrl": "https://www.ufotable.co.jp/kimetsu/event/hyakkei2025/img/goods/pins-uzui.webp"
+      },
+      {
+        "name": "柱百景 隨機15款別針 時透無一郎",
+        "price": 210,
+        "category": "random15",
+        "imageUrl": "https://www.ufotable.co.jp/kimetsu/event/hyakkei2025/img/goods/pins-muichiro.webp"
+      },
+      {
+        "name": "柱百景 隨機15款別針 甘露寺蜜璃",
+        "price": 210,
+        "category": "random15",
+        "imageUrl": "https://www.ufotable.co.jp/kimetsu/event/hyakkei2025/img/goods/pins-mitsuri.webp"
+      },
+      {
+        "name": "柱百景 隨機15款別針 不死川実弥",
+        "price": 210,
+        "category": "random15",
+        "imageUrl": "https://www.ufotable.co.jp/kimetsu/event/hyakkei2025/img/goods/pins-sanemi.webp"
+      },
+      {
+        "name": "柱百景 隨機15款別針 伊黒小芭内",
+        "price": 210,
+        "category": "random15",
+        "imageUrl": "https://www.ufotable.co.jp/kimetsu/event/hyakkei2025/img/goods/pins-iguro.webp"
+      },
+      {
+        "name": "柱百景 隨機15款別針 悲鳴嶼行冥",
+        "price": 210,
+        "category": "random15",
+        "imageUrl": "https://www.ufotable.co.jp/kimetsu/event/hyakkei2025/img/goods/pins-himejima.webp"
+      },
+      {
+        "name": "隊士百景 隨機15款名言卡 竈門炭治郎",
         "price": 150,
+        "category": "random15",
+        "imageUrl": "https://www.ufotable.co.jp/kimetsu/event/hyakkei2025/img/goods/card-tanjiro.webp"
+      },
+      {
+        "name": "隊士百景 隨機15款名言卡 竈門禰豆子",
+        "price": 150,
+        "category": "random15",
+        "imageUrl": "https://www.ufotable.co.jp/kimetsu/event/hyakkei2025/img/goods/card-nezuko.webp"
+      },
+      {
+        "name": "隊士百景 隨機15款名言卡 我妻善逸",
+        "price": 150,
+        "category": "random15",
+        "imageUrl": "https://www.ufotable.co.jp/kimetsu/event/hyakkei2025/img/goods/card-zenitsu.webp"
+      },
+      {
+        "name": "隊士百景 隨機15款名言卡 嘴平伊之助",
+        "price": 150,
+        "category": "random15",
+        "imageUrl": "https://www.ufotable.co.jp/kimetsu/event/hyakkei2025/img/goods/card-inosuke.webp"
+      },
+      {
+        "name": "隊士百景 隨機15款名言卡 栗花落カナヲ",
+        "price": 150,
+        "category": "random15",
+        "imageUrl": "https://www.ufotable.co.jp/kimetsu/event/hyakkei2025/img/goods/card-kanao.webp"
+      },
+      {
+        "name": "隊士百景 隨機15款名言卡 不死川玄弥",
+        "price": 150,
+        "category": "random15",
+        "imageUrl": "https://www.ufotable.co.jp/kimetsu/event/hyakkei2025/img/goods/card-genya.webp"
+      },
+      {
+        "name": "隊士百景～半 隨機8款名言卡 村田（不確定算不算在這）",
+        "price": 150,
+        "category": "random15",
+        "imageUrl": "https://www.ufotable.co.jp/kimetsu/event/hyakkei2025/img/goods/card-murata.webp"
+      },
+      {
+        "name": "柱百景 隨機15款名言卡 冨岡義勇",
+        "price": 150,
+        "category": "random15",
+        "imageUrl": "https://www.ufotable.co.jp/kimetsu/event/hyakkei2025/img/goods/card-giyu.webp"
+      },
+      {
+        "name": "柱百景 隨機15款名言卡 胡蝶しのぶ",
+        "price": 150,
+        "category": "random15",
+        "imageUrl": "https://www.ufotable.co.jp/kimetsu/event/hyakkei2025/img/goods/card-shinobu.webp"
+      },
+      {
+        "name": "柱百景 隨機15款名言卡 煉獄杏寿郎",
+        "price": 150,
+        "category": "random15",
+        "imageUrl": "https://www.ufotable.co.jp/kimetsu/event/hyakkei2025/img/goods/card-rengoku.webp"
+      },
+      {
+        "name": "柱百景 隨機15款名言卡 宇髄天元",
+        "price": 150,
+        "category": "random15",
+        "imageUrl": "https://www.ufotable.co.jp/kimetsu/event/hyakkei2025/img/goods/card-uzui.webp"
+      },
+      {
+        "name": "柱百景 隨機15款名言卡 時透無一郎",
+        "price": 150,
+        "category": "random15",
+        "imageUrl": "https://www.ufotable.co.jp/kimetsu/event/hyakkei2025/img/goods/card-muichiro.webp"
+      },
+      {
+        "name": "柱百景 隨機15款名言卡 甘露寺蜜璃",
+        "price": 150,
+        "category": "random15",
+        "imageUrl": "https://www.ufotable.co.jp/kimetsu/event/hyakkei2025/img/goods/card-mitsuri.webp"
+      },
+      {
+        "name": "柱百景 隨機15款名言卡 不死川実弥",
+        "price": 150,
+        "category": "random15",
+        "imageUrl": "https://www.ufotable.co.jp/kimetsu/event/hyakkei2025/img/goods/card-sanemi.webp"
+      },
+      {
+        "name": "柱百景 隨機15款名言卡 伊黒小芭内",
+        "price": 150,
+        "category": "random15",
+        "imageUrl": "https://www.ufotable.co.jp/kimetsu/event/hyakkei2025/img/goods/card-iguro.webp"
+      },
+      {
+        "name": "柱百景 隨機15款名言卡 悲鳴嶼行冥",
+        "price": 150,
+        "category": "random15",
+        "imageUrl": "https://www.ufotable.co.jp/kimetsu/event/hyakkei2025/img/goods/card-himejima.webp"
+      },
+
+      {
+        "name": "隊士百景 隨機15款壓克力吊飾 竈門炭治郎",
+        "price": 200,
+        "category": "random15",
+        "imageUrl": "https://www.ufotable.co.jp/kimetsu/event/hyakkei2025/img/goods/kizunacharm-tanjiro.webp"
+      },
+      {
+        "name": "隊士百景 隨機15款壓克力吊飾 竈門禰豆子",
+        "price": 200,
+        "category": "random15",
+        "imageUrl": "https://www.ufotable.co.jp/kimetsu/event/hyakkei2025/img/goods/kizunacharm-nezuko.webp"
+      },
+      {
+        "name": "隊士百景 隨機15款壓克力吊飾 我妻善逸",
+        "price": 200,
+        "category": "random15",
+        "imageUrl": "https://www.ufotable.co.jp/kimetsu/event/hyakkei2025/img/goods/kizunacharm-zenitsu.webp"
+      },
+      {
+        "name": "隊士百景 隨機15款壓克力吊飾 嘴平伊之助",
+        "price": 200,
+        "category": "random15",
+        "imageUrl": "https://www.ufotable.co.jp/kimetsu/event/hyakkei2025/img/goods/kizunacharm-inosuke.webp"
+      },
+      {
+        "name": "隊士百景 隨機15款壓克力吊飾 栗花落カナヲ",
+        "price": 200,
+        "category": "random15",
+        "imageUrl": "https://www.ufotable.co.jp/kimetsu/event/hyakkei2025/img/goods/kizunacharm-kanao.webp"
+      },
+      {
+        "name": "隊士百景 隨機15款壓克力吊飾 不死川玄弥",
+        "price": 200,
+        "category": "random15",
+        "imageUrl": "https://www.ufotable.co.jp/kimetsu/event/hyakkei2025/img/goods/kizunacharm-genya.webp"
+      },
+      {
+        "name": "隊士百景～半 隨機8款壓克力吊飾 村田（不確定算不算在這）",
+        "price": 200,
+        "category": "random15",
+        "imageUrl": "https://www.ufotable.co.jp/kimetsu/event/hyakkei2025/img/goods/kizunacharm-murata.webp"
+      },
+      {
+        "name": "柱百景 隨機15款壓克力吊飾 冨岡義勇",
+        "price": 200,
+        "category": "random15",
+        "imageUrl": "https://www.ufotable.co.jp/kimetsu/event/hyakkei2025/img/goods/kizunacharm-giyu.webp"
+      },
+      {
+        "name": "柱百景 隨機15款壓克力吊飾 胡蝶しのぶ",
+        "price": 200,
+        "category": "random15",
+        "imageUrl": "https://www.ufotable.co.jp/kimetsu/event/hyakkei2025/img/goods/kizunacharm-shinobu.webp"
+      },
+      {
+        "name": "柱百景 隨機15款壓克力吊飾 煉獄杏寿郎",
+        "price": 200,
+        "category": "random15",
+        "imageUrl": "https://www.ufotable.co.jp/kimetsu/event/hyakkei2025/img/goods/kizunacharm-rengoku.webp"
+      },
+      {
+        "name": "柱百景 隨機15款壓克力吊飾 宇髄天元",
+        "price": 200,
+        "category": "random15",
+        "imageUrl": "https://www.ufotable.co.jp/kimetsu/event/hyakkei2025/img/goods/kizunacharm-uzui.webp"
+      },
+      {
+        "name": "柱百景 隨機15款壓克力吊飾 時透無一郎",
+        "price": 200,
+        "category": "random15",
+        "imageUrl": "https://www.ufotable.co.jp/kimetsu/event/hyakkei2025/img/goods/kizunacharm-muichiro.webp"
+      },
+      {
+        "name": "柱百景 隨機15款壓克力吊飾 甘露寺蜜璃",
+        "price": 200,
+        "category": "random15",
+        "imageUrl": "https://www.ufotable.co.jp/kimetsu/event/hyakkei2025/img/goods/kizunacharm-mitsuri.webp"
+      },
+      {
+        "name": "柱百景 隨機15款壓克力吊飾 不死川実弥 ",
+        "price": 200,
+        "category": "random15",
+        "imageUrl": "https://www.ufotable.co.jp/kimetsu/event/hyakkei2025/img/goods/kizunacharm-sanemi.webp"
+      },
+      {
+        "name": "柱百景 隨機15款壓克力吊飾 伊黒小芭内",
+        "price": 200,
+        "category": "random15",
+        "imageUrl": "https://www.ufotable.co.jp/kimetsu/event/hyakkei2025/img/goods/kizunacharm-iguro.webp"
+      },
+      {
+        "name": "柱百景 隨機15款壓克力吊飾 悲鳴嶼行冥",
+        "price": 200,
+        "category": "random15",
+        "imageUrl": "https://www.ufotable.co.jp/kimetsu/event/hyakkei2025/img/goods/kizunacharm-himejima.webp"
+      },
+      {
+        "name": "其他未放上的隨機15款物（供計數用）",
         "category": "random15"
       }
     ]

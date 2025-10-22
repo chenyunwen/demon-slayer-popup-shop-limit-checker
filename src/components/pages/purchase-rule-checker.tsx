@@ -1,10 +1,10 @@
 "use client";
-import React, { useMemo, useState } from 'react';
+import React, { useMemo, useState } from "react";
 
-import sampleSeries from '@/../public/products.json';
-import { CartItem, CATEGORY_LABELS, Product, ProductSeries } from '@/constants';
+import sampleSeries from "@/../public/products.json";
+import { CartItem, CATEGORY_LABELS, Product, ProductSeries } from "@/constants";
 
-import FloatingCart from '../ui/floating-cart';
+import FloatingCart from "../ui/floating-cart";
 
 const SAMPLE_SERIES = sampleSeries as ProductSeries[];
 
@@ -162,7 +162,7 @@ export default function PurchaseRuleChecker() {
         >
           @kawaiii_1228
         </a>{" "}
-        提供使用！內容來源原文件網址
+        提供參考及使用！原文件網址
         <a
           href="https://docs.google.com/document/d/1mxL58ZN7Y-HBvRDCUsKSrvJZyDl8wEcVc_YauleMNA4/edit?usp=sharing"
           target="blank"
@@ -171,6 +171,17 @@ export default function PurchaseRuleChecker() {
           在此
         </a>
         ，裡面與有更多與展覽相關的介紹，非常用心！
+      </div>
+      <div className="text-subText my-2">
+        隨機40款及15款盲抽的圖片皆來自
+        <a
+          href="https://www.ufotable.co.jp/kimetsu/event/hyakkei2025/"
+          target="blank"
+          className="underline underline-offset-2"
+        >
+          官網
+        </a>
+        。
       </div>
       <div className="text-subText my-2">
         業餘時間抽空製作，若有任何錯誤、不完整、可改善之處之可至
@@ -183,13 +194,17 @@ export default function PurchaseRuleChecker() {
         </a>
         下方留言回報，心有餘力時會盡量修改，請勿過度催促、惡意謾罵，謝謝大家！祝大家搶票/排隊順利、逛展愉快！
         <br />
-        最後更新時間：2025/10/18 04:30
+        最後更新時間：2025/10/22 12:30
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-4">
+        {/* <div className="md:col-span-2"> */}
         <div className="md:col-span-2">
           <section className="mb-4">
             <h2 className="text-lg font-medium">商品清單</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-3">
+            <span className="text-subText text-xs">
+              點擊圖片可在新視窗中察看
+            </span>
+            <div className="grid grid-cols-1  gap-3 mt-3">
               {series.map((s) => (
                 <div key={s.key} className="border rounded p-3">
                   {/* 系列標題區 */}
@@ -222,7 +237,7 @@ export default function PurchaseRuleChecker() {
                     <div className="mt-3 grid grid-cols-2 gap-2">
                       {s.items.map((item) => (
                         <div
-                          key={item.id}
+                          key={item.name}
                           className="border rounded p-3 flex flex-col justify-between items-center"
                         >
                           <div className="font-medium">{item.name}</div>
@@ -232,6 +247,15 @@ export default function PurchaseRuleChecker() {
                               alt={item.name}
                               className="w-24 h-24 object-contain mb-2"
                             />
+                          )}
+                          {item.imageUrl && (
+                            <a href={item.imageUrl} target="blank">
+                              <img
+                                src={item.imageUrl}
+                                alt={item.name}
+                                className="w-24 h-24 object-contain mb-2"
+                              />
+                            </a>
                           )}
                           <div className="text-sm pt-0.5 pb-1 text-subText">
                             {item?.price ? `$ ${item.price}` : "無價格資料"}
