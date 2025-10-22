@@ -518,24 +518,19 @@
         "category": "extreme"
       },
       {
-        "name": "竈門炭治郎 立志編 原畫集 (厚)",
+        "id": "extreme_2",
+        "name": "立志編1-13、立志編14-26 原畫集 (厚)",
         "price": 1180,
-        "category": "extreme",
-        "imageUrl": [
-          "https://client-api.modd.com/assets/UFWE/fc7244a0-3ace-4904-84fa-9169f91dee68.jpeg",
-          "https://client-api.modd.com/assets/UFWE/5399a49e-eec0-4dda-a1f6-6c582e88d0f1.jpeg"
-        ],
-        "imageName": ["第一話～第十三話", "第十四話～第二十六話"]
+        "category": "extreme"
       },
       {
-        "name": "無限列車篇 原畫集 (厚)",
+        "id": "extreme_3",
+        "name": "無線列車篇 原畫集 (厚)",
         "price": 1580,
-        "category": "extreme",
-        "imageUrl": [
-          "https://client-api.modd.com/assets/UFWE/ec9f7972-2aed-41e6-9073-5d5bfd6894e3.jpeg"
-        ]
+        "category": "extreme"
       },
       {
+        "id": "extreme_4",
         "name": "遊郭篇 原畫集 ",
         "price": 1890,
         "category": "extreme"
@@ -547,7 +542,7 @@
         "category": "extreme"
       },
       {
-        "name": "隨機迷你Q版連結立牌（不確定現場有哪些）",
+        "name": "隨機迷你Q版連結立牌 極限量 第一彈、第二彈、第三彈、第六彈",
         "price": 300,
         "category": "extreme",
         "imageUrl": [
@@ -561,18 +556,6 @@
           "https://client-api.modd.com/assets/UFWE/5283a201-a35c-4c05-9ce7-ccd18bcc3038.jpeg",
           "https://client-api.modd.com/assets/UFWE/7ba976e3-7abd-4576-9640-e3dc58a4278c.jpeg",
           "https://client-api.modd.com/assets/UFWE/783e29f1-61d6-4135-a214-fd9b7d0c20cd.jpeg"
-        ],
-        "imageName": [
-          "第一彈",
-          "第二彈",
-          "第三彈",
-          "第四彈",
-          "第五彈",
-          "第六彈",
-          "無限列車編 第一彈",
-          "無限列車編 第二彈",
-          "遊郭編 A",
-          "遊郭編 B"
         ]
       },
       {
@@ -581,7 +564,12 @@
         "price": 280,
         "category": "extreme"
       },
-
+      {
+        "id": "extreme_8",
+        "name": "原畫資料夾 (立志篇、遊郭篇) ",
+        "price": 260,
+        "category": "extreme"
+      },
       {
         "id": "extreme_9",
         "name": "煉獄杏壽郎台詞冊(含一串貼紙)",
@@ -620,78 +608,16 @@
         "category": "other"
       },
       {
+        "id": "other_2",
         "name": "應援徽章 (九柱+炭禰善豬)",
         "price": 330,
-        "category": "other",
-        "imageUrl": [
-          "https://webshop-global.ufotable.co.jp/cdn/shop/files/4582711943105____12_830x.webp?v=1751615581",
-          "https://webshop-global.ufotable.co.jp/cdn/shop/files/4582711943112____13_830x.webp?v=1751615581",
-          "https://webshop-global.ufotable.co.jp/cdn/shop/files/4582711943129____11_830x.webp?v=1751615581",
-          "https://webshop-global.ufotable.co.jp/cdn/shop/files/4582711943136____10_830x.webp?v=1751615581",
-
-          "https://webshop-global.ufotable.co.jp/cdn/shop/files/pin-giyu_544x.jpg?v=1738122506",
-          "https://webshop-global.ufotable.co.jp/cdn/shop/files/pin-shinbou_830x.jpg?v=1738122848",
-          "https://webshop-global.ufotable.co.jp/cdn/shop/files/261525129faee5597ff4ec260d913eee_830x.jpg?v=1740574629",
-          "https://webshop-global.ufotable.co.jp/cdn/shop/files/c7bdbd2480616a0b69de91bdcad00163_830x.jpg?v=1740574393",
-          "https://webshop-global.ufotable.co.jp/cdn/shop/files/3da498d8666cc4de9fe93d168223e8fc_830x.webp?v=1732081737",
-
-          "https://webshop-global.ufotable.co.jp/cdn/shop/files/20295981a48487e4ce72066374575b93_830x.jpg?v=1734501826",
-          "https://webshop-global.ufotable.co.jp/cdn/shop/files/21fb05ce4366f6ef58a421402fec783c_830x.jpg?v=1734501623",
-          "https://webshop-global.ufotable.co.jp/cdn/shop/files/5e0275321e3f335db28af57ef13b6abb_830x.webp?v=1732081339",
-          "https://webshop-global.ufotable.co.jp/cdn/shop/files/4582711943143____14_830x.webp?v=1751615581"
-        ],
-        "imageName": [
-          "竈門炭治郎",
-          "竈門禰豆子",
-          "我妻善逸",
-          "嘴平伊之助",
-
-          "冨岡義勇",
-          "胡蝶しのぶ",
-          "甘露寺蜜璃",
-          "伊黒小芭内",
-          "宇髄天元",
-          "時透無一郎",
-          "悲鳴嶼行冥",
-          "不死川実弥",
-          "煉獄杏寿郎"
-        ]
+        "category": "other"
       },
       {
         "id": "other_3",
         "name": "柱陶瓷杯墊",
         "price": 380,
-        "category": "other",
-        "imageUrl": [
-          "https://webshop-global.ufotable.co.jp/cdn/shop/files/coaster-giyu1_830x.jpg?v=1738122761",
-          "https://webshop-global.ufotable.co.jp/cdn/shop/files/coaster-giyu2_830x.jpg?v=1738122773",
-          "https://webshop-global.ufotable.co.jp/cdn/shop/files/coaster-giyu3_830x.jpg?v=1738122785",
-          "https://webshop-global.ufotable.co.jp/cdn/shop/files/coaster-giyu4_830x.jpg?v=1738122797",
-
-          "https://webshop-global.ufotable.co.jp/cdn/shop/files/coaster-shinobu1_830x.jpg?v=1738122967",
-          "https://webshop-global.ufotable.co.jp/cdn/shop/files/coaster-shinobu2_830x.jpg?v=1738122979",
-          "https://webshop-global.ufotable.co.jp/cdn/shop/files/coaster-shinobu3_830x.jpg?v=1738122993",
-          "https://webshop-global.ufotable.co.jp/cdn/shop/files/coaster-shinobu4_830x.jpg?v=1738123009",
-
-          "https://webshop-global.ufotable.co.jp/cdn/shop/files/04_93e85b11-d231-4b99-8d78-e08d99c45c33_830x.jpg?v=1734579214",
-          "https://webshop-global.ufotable.co.jp/cdn/shop/files/03_78117191-e54e-4a35-befc-092713273b9a_830x.jpg?v=1734579194",
-          "https://webshop-global.ufotable.co.jp/cdn/shop/files/02_ce203582-a002-45fb-b9f7-deece4fc19a3_830x.jpg?v=1734579179",
-          "https://webshop-global.ufotable.co.jp/cdn/shop/files/01_3b35da74-4cb4-4828-98e5-421224657ab2_830x.jpg?v=1734579163"
-        ],
-        "imageName": [
-          "冨岡義勇 01",
-          "冨岡義勇 02",
-          "冨岡義勇 03",
-          "冨岡義勇 04",
-          "胡蝶しのぶ 01",
-          "胡蝶しのぶ 02",
-          "胡蝶しのぶ 03",
-          "胡蝶しのぶ 04",
-          "時透無一郎 01",
-          "時透無一郎 02",
-          "時透無一郎 03",
-          "時透無一郎 04"
-        ]
+        "category": "other"
       },
       {
         "id": "other_4",
@@ -707,23 +633,15 @@
       },
       {
         "id": "other_6",
-        "name": "柱咖啡 九柱隨機動畫/光柵徽章",
+        "name": "柱隨機動畫徽章",
         "price": 260,
-        "category": "other",
-        "imageUrl": [
-          "https://webshop-global.ufotable.co.jp/cdn/shop/files/f359790713bcd1baa1085b191d293f5e_830x.jpg?v=1738122702",
-          "https://webshop-global.ufotable.co.jp/cdn/shop/files/856b69a91f4f709356f5e03bc685c258_830x.jpg?v=1738122901",
-          "https://webshop-global.ufotable.co.jp/cdn/shop/files/ecf2618ab088b3cee5f4d82430ee5226_830x.jpg?v=1734501898",
-          "https://webshop-global.ufotable.co.jp/cdn/shop/files/e8799fe4fb5670886ed9a109f3be3217_830x.jpg?v=1734501679",
-          "https://pbs.twimg.com/media/GfX9G8Ka8AAt5Zy?format=jpg&name=large"
-        ],
-        "imageName": [
-          "冨岡義勇",
-          "胡蝶しのぶ",
-          "時透無一郎",
-          "悲鳴嶼行冥",
-          "不死川実弥"
-        ]
+        "category": "other"
+      },
+      {
+        "id": "other_7",
+        "name": "迷你場景壓克力",
+        "price": 330,
+        "category": "other"
       },
       {
         "id": "other_8",
@@ -888,62 +806,23 @@
         "price": 380,
         "category": "other"
       },
-
       {
-        "name": "柱咖啡 九柱拍立得收納夾",
+        "id": "other_36",
+        "name": "柱咖啡廳 光柵徽章(小) 盲抽 (九柱、柱訓練第四集、柱訓練第八集、水之呼吸)",
+        "price": 260,
+        "category": "other"
+      },
+      {
+        "id": "other_37",
+        "name": "柱咖啡廳 富岡義勇明信片收納夾 ",
         "price": 780,
-        "category": "other",
-        "imageUrl": [
-          "https://webshop-global.ufotable.co.jp/cdn/shop/files/chekiholder-giyu_830x.jpg?v=1738122523",
-          "https://webshop-global.ufotable.co.jp/cdn/shop/files/chekiholder-shinobu_830x.jpg?v=1738122863",
-          "https://pbs.twimg.com/media/GfilgDFbAAAra4l?format=jpg&name=large",
-          "https://webshop-global.ufotable.co.jp/cdn/shop/files/4af475577190f5cec7ebd998cf932ef9_830x.jpg?v=1734501641",
-          "https://pbs.twimg.com/media/GfX9I6LbcAAWSnP?format=jpg&name=large"
-        ],
-        "imageName": [
-          "冨岡義勇",
-          "胡蝶しのぶ",
-          "時透無一郎",
-          "悲鳴嶼行冥",
-          "不死川実弥"
-        ]
+        "category": "other"
       },
       {
-        "name": "柱咖啡 九柱隨機迷你場景立牌",
+        "id": "other_38",
+        "name": "柱咖啡廳九柱迷你場景立牌 盲抽",
         "price": 330,
-        "category": "other",
-        "imageUrl": [
-          "https://webshop-global.ufotable.co.jp/cdn/shop/files/gio-acsta-giyu_830x.jpg?v=1738122745",
-          "https://webshop-global.ufotable.co.jp/cdn/shop/files/gio-acsta-gshinobu_830x.jpg?v=1738122938",
-          "https://webshop-global.ufotable.co.jp/cdn/shop/files/ac040ade32f74da7590bcb4b7b1de20e_830x.jpg?v=1734501938",
-          "https://webshop-global.ufotable.co.jp/cdn/shop/files/e006e83bd2e66396e1043a998afd0444_830x.jpg?v=1734501710",
-          "https://pbs.twimg.com/media/GfX9Ho7aQAAgRlk?format=jpg&name=large"
-        ],
-        "imageName": [
-          "冨岡義勇",
-          "胡蝶しのぶ",
-          "時透無一郎",
-          "悲鳴嶼行冥",
-          "不死川実弥"
-        ]
-      },
-      {
-        "name": "柱咖啡 九柱隨機拍立得",
-        "category": "other",
-        "imageUrl": [
-          "https://webshop-global.ufotable.co.jp/cdn/shop/files/cheki-giyu_830x.jpg?v=1738122719",
-          "https://webshop-global.ufotable.co.jp/cdn/shop/files/cheki-shinobu_830x.jpg?v=1738122916",
-          "https://webshop-global.ufotable.co.jp/cdn/shop/files/63c601800bcb0e7c156f5b6a88aaadd7_830x.jpg?v=1734501847",
-          "https://webshop-global.ufotable.co.jp/cdn/shop/files/6b32c776a4cffbaf63c0195a6f3dc038_830x.jpg?v=1734501693",
-          "https://pbs.twimg.com/media/GfX9IiHbQAE0Ggx?format=jpg&name=large"
-        ],
-        "imageName": [
-          "冨岡義勇",
-          "胡蝶しのぶ",
-          "時透無一郎",
-          "悲鳴嶼行冥",
-          "不死川実弥"
-        ]
+        "category": "other"
       },
       {
         "id": "other_39",

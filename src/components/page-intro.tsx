@@ -59,6 +59,14 @@ export default function PageIntro() {
         >
           ufotableWEBSHOP-Global - ufotable Official Store
         </a>
+        、
+        <a
+          href="https://x.com/ufotablecinema"
+          target="blank"
+          className="underline underline-offset-2"
+        >
+          @ufotablecinema
+        </a>
         ，
         <span className="font-bold">
           有的品項只先找一兩個做代表，圖片不代表現場有/沒有該角色
@@ -76,7 +84,7 @@ export default function PageIntro() {
         </a>
         下方留言回報，心有餘力時會盡量修改，請勿過度催促、惡意謾罵，謝謝大家！祝大家搶票/排隊順利、逛展愉快！
         <br />
-        最後更新時間：2025/10/23 2:30
+        最後更新時間：2025/10/23 3:10
       </div>
     </div>
   );
