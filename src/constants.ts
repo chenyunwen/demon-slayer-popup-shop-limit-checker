@@ -24,7 +24,8 @@ export type Product = {
   category: Category;
   price?: number;
   imageFile?: string;
-  imageUrl?: string;
+  imageUrl?: string | string[];
+  imageName?: string[];
 };
 
 export type ProductSeries = {

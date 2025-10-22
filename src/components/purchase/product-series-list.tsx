@@ -19,7 +19,7 @@ export default function ProductSeriesList({
     <section className="mb-4">
       <h2 className="text-lg font-medium">商品清單</h2>
       <span className="text-subText text-xs">點擊圖片可在新視窗中察看</span>
-      <div className="grid grid-cols-1  gap-3 mt-3">
+      <div className="grid grid-cols-1 gap-3 mt-3">
         {series.map((s) => (
           <div key={s.key} className="border rounded p-3">
             {/* 系列標題區 */}
@@ -49,11 +49,12 @@ export default function ProductSeriesList({
 
             {/* 展開後的子商品列表 */}
             {expanded[s.key] && (
-              <div className="mt-3 grid grid-cols-2 gap-2">
-                {s.items.map((item) => (
+              <div className="mt-3 grid grid-cols-1 sm:grid-cols-2 gap-2">
+                {s.items.map((item, index) => (
                   <ProductItemCard
                     key={item.name}
                     item={item}
+                    index={index}
                     addToCart={addToCart}
                   />
                 ))}

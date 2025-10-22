@@ -35,15 +35,35 @@ export default function PageIntro() {
         ，裡面與有更多與展覽相關的介紹，非常用心！
       </div>
       <div className="text-subText my-2">
-        隨機40款及15款盲抽的圖片皆來自
+        圖片來源自
         <a
           href="https://www.ufotable.co.jp/kimetsu/event/hyakkei2025/"
           target="blank"
           className="underline underline-offset-2"
         >
-          官網
+          鬼滅百景官網
         </a>
-        。
+        、
+        <a
+          href="https://webshop.ufotable.co.jp/products"
+          target="blank"
+          className="underline underline-offset-2"
+        >
+          ufotableWEBSHOP
+        </a>
+        、
+        <a
+          href="https://webshop-global.ufotable.co.jp/"
+          target="blank"
+          className="underline underline-offset-2"
+        >
+          ufotableWEBSHOP-Global - ufotable Official Store
+        </a>
+        ，
+        <span className="font-bold">
+          有的品項只先找一兩個做代表，圖片不代表現場有/沒有該角色
+        </span>
+        ，一切皆以現場為主，若有圖片與品項搭配錯誤的情形可向我回報。
       </div>
       <div className="text-subText my-2">
         業餘時間抽空製作，若有任何錯誤、不完整、可改善之處之可至
@@ -56,7 +76,7 @@ export default function PageIntro() {
         </a>
         下方留言回報，心有餘力時會盡量修改，請勿過度催促、惡意謾罵，謝謝大家！祝大家搶票/排隊順利、逛展愉快！
         <br />
-        最後更新時間：2025/10/22 14:30
+        最後更新時間：2025/10/23 2:30
       </div>
     </div>
   );

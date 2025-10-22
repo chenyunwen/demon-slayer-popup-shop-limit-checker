@@ -46,3 +46,22 @@ button:hover {
 button:active {
   transform: scale(0.95);
 }
+
+.swiper-button-prev,
+.swiper-button-next {
+  width: 20px !important;
+  height: 20px !important;
+  color: var(--subText) !important;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 12px !important; /* 控制箭頭大小 */
+}
+
+.custom-swiper-pagination {
+  position: relative !important; /* 確保它是相對定位或靜態定位 */
+  bottom: auto !important;
+  top: auto !important;
+  transform: none !important;
+}
