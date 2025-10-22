@@ -64,8 +64,8 @@ export default function PurchaseRuleChecker() {
 
   const cartItems = useMemo<CartItem[]>(() => {
     return Object.entries(cart)
-      .map(([id, qty]) => {
-        const product = flatProducts.find((fp) => fp.id === id);
+      .map(([name, qty]) => {
+        const product = flatProducts.find((fp) => fp.name === name);
         if (!product) return null;
 
         const subtotal = (product.price ?? 0) * qty;
@@ -194,7 +194,7 @@ export default function PurchaseRuleChecker() {
         </a>
         下方留言回報，心有餘力時會盡量修改，請勿過度催促、惡意謾罵，謝謝大家！祝大家搶票/排隊順利、逛展愉快！
         <br />
-        最後更新時間：2025/10/22 12:30
+        最後更新時間：2025/10/22 14:30
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-4">
         {/* <div className="md:col-span-2"> */}
@@ -262,7 +262,7 @@ export default function PurchaseRuleChecker() {
                           </div>
                           <button
                             className="px-3 py-1 rounded border hover:bg-gray-100 transition-transform duration-200 active:scale-95 hover:scale-110"
-                            onClick={() => addToCart(item.id)}
+                            onClick={() => addToCart(item.name)}
                           >
                             加入
                           </button>
@@ -283,7 +283,7 @@ export default function PurchaseRuleChecker() {
               <div className="mt-3 space-y-2">
                 {cartItems.map((it) => (
                   <div
-                    key={it.product.id}
+                    key={it.product.name}
                     className="flex items-center justify-between border rounded p-2"
                   >
                     <div>
@@ -300,7 +300,7 @@ export default function PurchaseRuleChecker() {
                     <div className="flex items-center gap-2 ">
                       <button
                         className="px-2 py-1 border rounded"
-                        onClick={() => removeOne(it.product.id)}
+                        onClick={() => removeOne(it.product.name)}
                       >
                         -
                       </button>
@@ -315,7 +315,7 @@ export default function PurchaseRuleChecker() {
                             const value = Math.floor(Number(e.target.value)); // 只取整數
                             const safeValue =
                               isNaN(value) || value < 1 ? 1 : value; // 限制至少為 1
-                            setQty(it.product.id, safeValue);
+                            setQty(it.product.name, safeValue);
                           }
                           // setQty(
                           //   it.product.id,
@@ -325,13 +325,13 @@ export default function PurchaseRuleChecker() {
                       />
                       <button
                         className="px-2 py-1 border rounded"
-                        onClick={() => setQty(it.product.id, it.qty + 1)}
+                        onClick={() => setQty(it.product.name, it.qty + 1)}
                       >
                         +
                       </button>
                       <button
                         className="px-2 py-1 border rounded bg-red-500 text-white hover:bg-red-600"
-                        onClick={() => setQty(it.product.id, 0)}
+                        onClick={() => setQty(it.product.name, 0)}
                       >
                         刪除
                       </button>
